@@ -1,0 +1,12 @@
+
+<h1>Lista de videojuegos</h1>
+ <mat-list>
+    <mat-list-item *ngFor="let elemento of listaJuegos">
+      <h3 mat-line>{{ elemento.titulo }}</h3>
+      <p mat-line>ID: {{ elemento.id }}</p>
+      <p mat-line>Valoracion media: {{ elemento.valoracion }}</p>
+      <img mat-list-avatar [src]="elemento.imagen" alt="{{ elemento.titulo }}">
+      <button class="blue-button" (click)="detalle(elemento.id)">Detalle</button>
+    </mat-list-item>
+  </mat-list>
+
